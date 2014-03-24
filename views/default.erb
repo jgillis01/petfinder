@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title> Pet Finder API </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+  <body>
+    <%= yield %>
+    <script type="text/template" id="pet-view-template">
+      <p>
+        <img src="{{image}}" />
+      <p>
+        <span class="title">Animal:</span>
+        <span>{{animal}}</span>
+      </p>
+      <p>
+        <span class="title">Name:</span>
+        <span>{{name}}</span>
+      </p>
+      <p>
+        <span class="title">Age:</span>
+        <span>{{age}}</span>
+      </p>
+      <p>
+        <span class="title">Description:</span>
+        <span>{{description}}</span>
+      </p>
+    </script>
+    <script type="text/template" id="form-template">
+      <label>Zipcode:</label>
+      <input type='text' />
+      <button>Find Pets</button>
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        window.app.initialize($('#main'));
+      });
+    </script>
+  </body>
+</html>
+
